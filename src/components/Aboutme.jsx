@@ -1,4 +1,5 @@
 import React from 'react'
+import AboutMeImg from '../images/me.jpg'
 
 const Aboutme = () => {
   return (
@@ -8,7 +9,7 @@ const Aboutme = () => {
       <p className='text-justify py-8'>Through my journey, I have developed strong skills in Ruby, Rails, JavaScript, ReactJS, CSS, and HTML. Furthermore, I am proficient with SQL and PostgreSQL databases. I have also gained a deep understanding of the application development process, from initial development to staging and deployment.</p>
       <div className='flex justify-center items-center'>
         <div className="about-img">
-          <img src="src/images/me.jpg" alt="" className='rounded-xl image-with-filter' />
+          <img src={AboutMeImg} alt="" className='rounded-xl image-with-filter' />
         </div>
       </div>
       <p className='text-justify py-8'>I love creating web applications that provide exceptional user experiences and perfectly meet my clients' needs. Currently, I am seeking a 2-month internship, from 02/10/2023 to 24/11/2023, which could potentially lead to a full-time job opportunity.</p>
