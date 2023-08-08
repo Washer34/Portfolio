@@ -5,11 +5,11 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
 const Main = () => {
   return (
     <div id='main'>
-      <img className='w-full h-screen object-cover scale-x-[-1]' src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="" />
-      <div className='w-full h-screen absolute top-0 left-0 bg-white/50'>
-        <div className='max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center'>
-          <h1 className='sm:text-5xl text-4xl font-bold text-gray-800'>I&apos;m Antoine Paturel</h1>
-          <h2 className='flex sm:text-3xl text-2xl pt-4 text-gray-800'>
+      <img className='main-img' src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="" />
+      <div className='main-overlay'>
+        <div className='main-content'>
+          <h1 className='main-title'>I&apos;m Antoine Paturel</h1>
+          <h2 className='main-subtitle'>
             I&apos;m&nbsp;
             <TypeAnimation
               sequence={[
@@ -29,9 +29,9 @@ const Main = () => {
             />
           </h2>
           <div className='flex justify-between pt-6 max-w-[200px] w-full'>
-            <a href="https://www.linkedin.com/in/antoine-ptrl/" target="_blank" rel="noopener noreferrer"><FaLinkedin className='cursor-pointer' size={20} /></a>
-            <a href="https://github.com/Washer34" target='_blank' rel="noopener noreferrer"><FaGithub className='cursor-pointer' size={20} /></a>
-            <a href="mailto:antoine.paturel34@free.fr" target='_blank' rel="noopener noreferrer"><FaEnvelope className='cursor-pointer' size={20} /></a>
+            <a href="https://www.linkedin.com/in/antoine-ptrl/" target="_blank" rel="noopener noreferrer"><FaLinkedin className='main-icon' size={25} /></a>
+            <a href="https://github.com/Washer34" target='_blank' rel="noopener noreferrer"><FaGithub className='main-icon' size={25} /></a>
+            <a href="mailto:antoine.paturel34@free.fr" target='_blank' rel="noopener noreferrer"><FaEnvelope className='main-icon' size={25} /></a>
           </div>
         </div>
       </div>

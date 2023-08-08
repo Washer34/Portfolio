@@ -8,8 +8,8 @@ const Projects = () => {
       <h1 className='text-4xl font-bold text-center text-[#001b5e]'>Projects</h1>
       <p className='text-center py-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, iure! Corrupti, qui quaerat harum sit earum beatae iure, rerum laborum omnis veritatis necessitatibus doloribus eaque rem error ea repellat officia!</p>
       <div className='grid sm:grid-cols-2 gap-12'>
-        <ProjectItem img={CaravanImg} title={'Caravan'} />
-        <ProjectItem img={CaravanImg} title={'Kiddens'} />
+        <ProjectItem img={CaravanImg} title={'Caravan'} tech={'Ruby'} />
+        <ProjectItem img={CaravanImg} title={'Kiddens'} tech={'Ruby'} />
       </div>
     </div>
 
