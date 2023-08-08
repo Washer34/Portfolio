@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { AiOutlineMenu, AiOutlineHome, AiOutlineMail, AiOutlineProject } from 'react-icons/ai';
 import { BsPerson, BsMoonStars, BsSun } from 'react-icons/bs'
+import ThemeContext from '../../theme/themecontext'
 
 const Sidenav = () => {
+  const mode = useContext(ThemeContext)
 
   const [nav, setNav] = useState(false)
+
   const handleNav = () => {
     setNav(!nav)
   }
 
   return (
     <div>
-      <AiOutlineMenu onClick={handleNav} className='absolute top-4 right-4 z-[99] md:hidden' />
+      <AiOutlineMenu onClick={handleNav} className='nav-burger md:hidden' />
       {
         nav ? (
           <div className="nav-menu">
@@ -35,11 +38,20 @@ const Sidenav = () => {
               <AiOutlineMail size={20} />
               <span className="pl-4">Contact</span>
             </a>
-            <a onClick={handleNav}
-              href="#contact" className="nav-link">
-              <BsMoonStars size={20} />
-              <span className="pl-4">Dark mode</span>
-            </a>
+            {mode.theme === 'light' ? (
+              <a onClick={mode.toggleTheme}
+                className="nav-link">
+                <BsMoonStars size={20} />
+                <span className="pl-4">Dark mode</span>
+              </a>
+            ) : (
+              <a onClick={mode.toggleTheme}
+                className="nav-link">
+                <BsSun size={20} />
+                <span className="pl-4">Light mode</span>
+              </a>
+            )
+            }
           </div>
         )
           : (
@@ -61,9 +73,15 @@ const Sidenav = () => {
           <a href="#contact" className='side-link'>
             <AiOutlineMail size={20} />
           </a>
-          <a href="#contact" className='side-link'>
-            <BsMoonStars size={20} />
-          </a>
+          {mode.theme === 'light' ? (
+            <a onClick={mode.toggleTheme} className='side-link'>
+              <BsMoonStars size={20} />
+            </a>
+          ) : (
+            <a onClick={mode.toggleTheme} className='side-link'>
+              <BsSun size={20} />
+            </a>
+          )}
         </div>
       </div>
 
