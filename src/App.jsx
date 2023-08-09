@@ -3,7 +3,9 @@ import Sidenav from './components/Sidenav'
 import Main from './components/Main'
 import Projects from './components/Projects'
 import Aboutme from './components/Aboutme'
+import Contact from './components/Contact'
 import ThemeContext from './theme/themecontext'
+
 
 function App() {
 
@@ -22,6 +24,7 @@ function App() {
         <Main />
         <Aboutme />
         <Projects />
+        <Contact />
       </div>
     </ThemeContext.Provider>
   )
