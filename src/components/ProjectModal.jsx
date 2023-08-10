@@ -10,16 +10,16 @@ const ProjectModal = ({ title }) => {
       <br />
       <Carousel width={'80%'} infiniteLoop={true}>
         <div>
-          <img className='carousel-img' src={`src/images/${lowerTitle}/${lowerTitle}0.png`} />
+          <img className='carousel-img' src={`/src/images/${lowerTitle}/${lowerTitle}0.png`} />
         </div>
         <div>
-          <img className='carousel-img' src={`src/images/${lowerTitle}/${lowerTitle}1.png`} />
+          <img className='carousel-img' src={`/src/images/${lowerTitle}/${lowerTitle}1.png`} />
         </div>
         <div>
-          <img className='carousel-img' src={`src/images/${lowerTitle}/${lowerTitle}2.png`} />
+          <img className='carousel-img' src={`/src/images/${lowerTitle}/${lowerTitle}2.png`} />
         </div>
         <div>
-          <img className='carousel-img' src={`src/images/${lowerTitle}/${lowerTitle}3.png`} />
+          <img className='carousel-img' src={`/src/images/${lowerTitle}/${lowerTitle}3.png`} />
         </div>
       </Carousel>
       <h1 className='custom-title'>{title}</h1>
