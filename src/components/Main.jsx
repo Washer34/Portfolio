@@ -1,25 +1,28 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 
 const Main = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <div id='main'>
       <img className='main-img' src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="" />
       <div className='main-overlay'>
         <div className='main-content'>
-          <h1 className='main-title'>I&apos;m Antoine Paturel</h1>
+          <h1 className='main-title'>{t('mainTitle')}</h1>
           <h2 className='main-subtitle'>
-            I&apos;m&nbsp;
+            {t('mainSubtitlePrefix')}&nbsp;
             <TypeAnimation
               sequence={[
-                'Web Developer',
+                'Développeur Web',
                 1000,
                 'Fullstack',
                 1000,
-                'Tech enthusiast',
+                'Passionné de technologie',
                 1000,
-                'constructive',
+                'Constructif',
                 1000
               ]}
               wrapper="span"

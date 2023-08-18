@@ -84,6 +84,20 @@
   transform: scale(1.1);
 }
 
+.nav-lang-link {
+  transform: scale(1.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-lang-link:hover {
+  transform: scale(1.8);
+}
+
 #light .side-link {
   display: flex;
   justify-content: center;
@@ -142,6 +156,12 @@
   text-align: center;
   color: #001b5e;
   margin-bottom: 1rem;
+}
+
+.custom-text {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 #dark .custom-title {
@@ -484,4 +504,15 @@
   justify-content: center;
   align-items: center;
 
+}
+
+/* Effets animations */
+
+[data-aos='custom-fade-in'] {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+[data-aos='custom-fade-in'].aos-animate {
+  opacity: 1;
 }

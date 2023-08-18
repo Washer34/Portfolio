@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import ProjectModal from './ProjectModal'
 
-const ProjectItem = ({ img, title, tech, zIndex }) => {
+const ProjectItem = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const { description, attributes, data, zIndex } = props;
+  const imgUrl = attributes.Screens.data[0].attributes.url || '';
+  const tech = 'ruby'
+  console.log('Zindex= ', zIndex)
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -20,10 +24,10 @@ const ProjectItem = ({ img, title, tech, zIndex }) => {
   return (
     <div>
       <div className='project-item'>
-        <img src={img} alt="/" className='project-img' />
+        <img src={`http://localhost:1337${imgUrl}`} alt="/" className='project-img' />
         <div className='project-details'>
           <h3 className='project-title'>
-            {title}
+            {attributes.Title}
           </h3>
           <p className='project-tech'>{tech}</p>
           <a onClick={openModal}>
@@ -32,9 +36,9 @@ const ProjectItem = ({ img, title, tech, zIndex }) => {
         </div>
       </div>
       {isModalOpen && (
-        <div className="modal" style={{ zIndex: zIndex }}>
+        <div className="modal" style={{ zIndex: zIndex + 1 }} >
           <div className="modal-overlay" onClick={handleOverlayClick}></div>
-          <ProjectModal title={title} />
+          <ProjectModal project={props} />
         </div>
       )}
     </div>

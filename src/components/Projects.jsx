@@ -1,18 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ProjectItem from './ProjectItem'
 import CaravanImg from '../images/caravan/caravan0.png'
 import KiddensImg from '../images/kiddens/kiddens0.png'
+import { useTranslation } from 'react-i18next'
 
 const Projects = () => {
-  const kiddensDescription = '';
-  const caravanDescription = '';
+  const [projectList, setProjectList] = useState([])
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:1337/api/projects/?populate=Screens');
+        const data = await response.json();
+        setProjectList(data.data);
+        console.log(data.data)
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données: ', error);
+      }
+    };
+    fetchData()
+  }, [])
+
   return (
     <div id='projects' className='max-w-[1040px] m-auto md:pl-20 p-4 py-16'>
-      <h1 className='custom-title'>Projects</h1>
-      <p className='text-center py-8'>Throughout my training at The Hacking Project, I have been able to create various projects, more or less elaborate. This section will also showcase the future projects I will be involved in during my web developer career.</p>
+      <h1 className='custom-title'>{t('projectTitle')}</h1>
+      <p className='custom-text' data-aos="flip-up" data-aos-offset="400">{t('projectIntro')}</p>
       <div className='grid sm:grid-cols-2 gap-12'>
-        <ProjectItem img={CaravanImg} title={'Caravan'} tech={'Ruby'} zIndex={1} description={caravanDescription} />
-        <ProjectItem img={KiddensImg} title={'Kiddens'} tech={'Ruby'} zIndex={2} description={kiddensDescription} />
+        {projectList.map((project, index) => {
+          return (
+            <>
+              <ProjectItem tech={'Ruby'} zIndex={index} {...project} />
+            </>
+          )
+        })}
       </div>
     </div>
   )

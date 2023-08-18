@@ -2,15 +2,27 @@ import React, { useState, useContext } from 'react';
 import { AiOutlineMenu, AiOutlineHome, AiOutlineMail, AiOutlineProject } from 'react-icons/ai';
 import { BsPerson, BsMoonStars, BsSun } from 'react-icons/bs'
 import ThemeContext from '../../theme/themecontext'
+import LangContext from '../../lang/langcontext';
+import ReactCountryFlag from "react-country-flag"
 
 const Sidenav = () => {
   const mode = useContext(ThemeContext)
-
+  const lang = useContext(LangContext)
   const [nav, setNav] = useState(false)
 
   const handleNav = () => {
     setNav(!nav)
   }
+
+  const handleToggleLanguage = () => {
+    lang.toggleLang();
+    setNav(!nav)
+  };
+
+  const toggleLanguage = () => {
+    lang.toggleLang();
+  };
+
 
   return (
     <div>
@@ -52,6 +64,19 @@ const Sidenav = () => {
               </a>
             )
             }
+            {lang.lang === 'fr' ? (
+              <a onClick={handleToggleLanguage}
+                className="nav-link">
+                <ReactCountryFlag countryCode="FR" />
+                <span className="pl-4">Lang</span>
+              </a>
+            ) : (
+              <a onClick={handleToggleLanguage}
+                className="nav-link">
+                <ReactCountryFlag countryCode="EN" />
+                <span className="pl-4">Lang</span>
+              </a>
+            )}
           </div>
         )
           : (
@@ -80,6 +105,25 @@ const Sidenav = () => {
           ) : (
             <a onClick={mode.toggleTheme} className='side-link'>
               <BsSun size={20} />
+            </a>
+          )}
+          {lang.lang === 'fr' ? (
+            <a onClick={toggleLanguage}
+              className="nav-lang-link">
+              <ReactCountryFlag
+                countryCode="FR"
+                svg
+                title="FR"
+              />
+            </a>
+          ) : (
+            <a onClick={toggleLanguage}
+              className="nav-lang-link">
+              <ReactCountryFlag
+                countryCode="GB"
+                svg
+                title="GB"
+              />
             </a>
           )}
         </div>
