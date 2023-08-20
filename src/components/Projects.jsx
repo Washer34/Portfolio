@@ -11,7 +11,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:1337/api/projects/?populate=Screens');
+        const response = await fetch('https://antoine-strapi.up.railway.app/api/projects?populate=screens');
         const data = await response.json();
         setProjectList(data.data);
         console.log(data.data)
@@ -29,13 +29,13 @@ const Projects = () => {
       <div className='grid sm:grid-cols-2 gap-12'>
         {projectList.map((project, index) => {
           return (
-            <>
-              <ProjectItem tech={'Ruby'} zIndex={index} {...project} />
-            </>
+            <div key={index}>
+              < ProjectItem zIndex={index} {...project} />
+            </div>
           )
         })}
       </div>
-    </div>
+    </div >
   )
 }
 

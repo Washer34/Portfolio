@@ -4,9 +4,7 @@ import ProjectModal from './ProjectModal'
 const ProjectItem = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const { description, attributes, data, zIndex } = props;
-  const imgUrl = attributes.Screens.data[0].attributes.url || '';
-  const tech = 'ruby'
-  console.log('Zindex= ', zIndex)
+  const imgUrl = attributes.screens.data[0].attributes.url || '';
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -24,12 +22,12 @@ const ProjectItem = (props) => {
   return (
     <div>
       <div className='project-item'>
-        <img src={`http://localhost:1337${imgUrl}`} alt="/" className='project-img' />
+        <img src={`${imgUrl}`} alt="/" className='project-img' />
         <div className='project-details'>
           <h3 className='project-title'>
-            {attributes.Title}
+            {attributes.title}
           </h3>
-          <p className='project-tech'>{tech}</p>
+          <p className='project-tech'>{attributes.tech}</p>
           <a onClick={openModal}>
             <p className='project-more-info'>More Info</p>
           </a>

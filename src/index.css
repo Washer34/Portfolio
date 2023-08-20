@@ -455,10 +455,6 @@
   max-height: 80vh;
   overflow: auto;
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 #dark .modal-content {
@@ -470,10 +466,11 @@
   max-height: 80vh;
   overflow: auto;
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+.modal-content ReactMarkdown {
+  flex: 1;
+  overflow: auto;
 }
 
 .modal-overlay {
@@ -487,23 +484,21 @@
 }
 
 .carousel-img {
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
 .carousel-root {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.carousel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+h2 {
+  font-size: 24px;
+  text-align: center;
 }
 
 /* Effets animations */
