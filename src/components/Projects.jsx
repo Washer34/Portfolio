@@ -14,7 +14,6 @@ const Projects = () => {
         const response = await fetch('https://antoine-strapi.up.railway.app/api/projects?populate=screens');
         const data = await response.json();
         setProjectList(data.data);
-        console.log(data.data)
       } catch (error) {
         console.error('Erreur lors de la récupération des données: ', error);
       }

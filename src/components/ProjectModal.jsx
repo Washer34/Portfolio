@@ -10,7 +10,9 @@ const ProjectModal = (props) => {
   const generateCarouselItems = () => {
     return attributes.screens.data.map((screen, index) => (
       <div key={index}>
-        <img className='carousel-img' src={screen.attributes.url} alt={`Image ${index + 1}`} />
+        <img className='carousel-img' src={screen.attributes.url} alt={`Image ${index + 1}`}
+          width="100%"
+          height="auto" />
       </div>
     ));
   };

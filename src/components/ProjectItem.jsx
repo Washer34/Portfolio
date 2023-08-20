@@ -22,7 +22,7 @@ const ProjectItem = (props) => {
   return (
     <div>
       <div className='project-item'>
-        <img src={`${imgUrl}`} alt="/" className='project-img' />
+        <img src={`${imgUrl}`} alt="/" className='project-img' width="100%" height="auto" />
         <div className='project-details'>
           <h3 className='project-title'>
             {attributes.title}

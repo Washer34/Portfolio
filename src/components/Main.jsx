@@ -32,9 +32,9 @@ const Main = () => {
             />
           </h2>
           <div className='flex justify-between pt-6 max-w-[200px] w-full'>
-            <a href="https://www.linkedin.com/in/antoine-ptrl/" target="_blank" rel="noopener noreferrer"><FaLinkedin className='main-icon' size={25} /></a>
-            <a href="https://github.com/Washer34" target='_blank' rel="noopener noreferrer"><FaGithub className='main-icon' size={25} /></a>
-            <a href="mailto:antoine.paturel34@free.fr" target='_blank' rel="noopener noreferrer"><FaEnvelope className='main-icon' size={25} /></a>
+            <a aria-label='mon Linkedin' href="https://www.linkedin.com/in/antoine-ptrl/" target="_blank" rel="noopener noreferrer"><FaLinkedin className='main-icon' size={25} /></a>
+            <a aria-label='mon GitHub' href="https://github.com/Washer34" target='_blank' rel="noopener noreferrer"><FaGithub className='main-icon' size={25} /></a>
+            <a aria-label='mon Email' href="mailto:antoine.paturel34@free.fr" target='_blank' rel="noopener noreferrer"><FaEnvelope className='main-icon' size={25} /></a>
           </div>
         </div>
       </div>

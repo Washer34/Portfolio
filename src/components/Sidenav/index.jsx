@@ -30,34 +30,34 @@ const Sidenav = () => {
       {
         nav ? (
           <div className="nav-menu">
-            <a onClick={handleNav}
+            <a aria-label='Accueil' onClick={handleNav}
               href="#main" className="nav-link">
               <AiOutlineHome size={20} />
               <span className="pl-4">Home</span>
             </a>
-            <a onClick={handleNav}
+            <a aria-label='A propos de moi' onClick={handleNav}
               href="#aboutme" className="nav-link">
               <BsPerson size={20} />
               <span className="pl-4">About me</span>
             </a>
-            <a onClick={handleNav}
+            <a aria-label='Les projets' onClick={handleNav}
               href="#projects" className="nav-link">
               <AiOutlineProject size={20} />
               <span className="pl-4">Projects</span>
             </a>
-            <a onClick={handleNav}
+            <a aria-label='Contactez-moi' onClick={handleNav}
               href="#contact" className="nav-link">
               <AiOutlineMail size={20} />
               <span className="pl-4">Contact</span>
             </a>
             {mode.theme === 'light' ? (
-              <a onClick={mode.toggleTheme}
+              <a aria-label='Mode sombre' onClick={mode.toggleTheme}
                 className="nav-link">
                 <BsMoonStars size={20} />
                 <span className="pl-4">Dark mode</span>
               </a>
             ) : (
-              <a onClick={mode.toggleTheme}
+              <a aria-label='Mode lumineux' onClick={mode.toggleTheme}
                 className="nav-link">
                 <BsSun size={20} />
                 <span className="pl-4">Light mode</span>
@@ -65,16 +65,22 @@ const Sidenav = () => {
             )
             }
             {lang.lang === 'fr' ? (
-              <a onClick={handleToggleLanguage}
+              <a aria-label='Changer la langue' onClick={handleToggleLanguage}
                 className="nav-link">
-                <ReactCountryFlag countryCode="FR" />
-                <span className="pl-4">Lang</span>
+                <ReactCountryFlag
+                  countryCode="FR"
+                  svg
+                  title="FR" />
+                <span className="pl-4">Langue</span>
               </a>
             ) : (
-              <a onClick={handleToggleLanguage}
+              <a aria-label='Switch language' onClick={handleToggleLanguage}
                 className="nav-link">
-                <ReactCountryFlag countryCode="EN" />
-                <span className="pl-4">Lang</span>
+                <ReactCountryFlag
+                  countryCode="GB"
+                  svg
+                  title="GB" />
+                <span className="pl-4">Language</span>
               </a>
             )}
           </div>

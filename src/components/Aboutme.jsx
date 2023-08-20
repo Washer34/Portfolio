@@ -12,7 +12,7 @@ const Aboutme = () => {
       <p className='custom-text' data-aos="fade-left">{t('aboutMeSkills')}</p>
       <div className='flex justify-center items-center' data-aos="fade-in">
         <div className="about-img">
-          <img src={AboutMeImg} alt="" className='rounded-xl image-with-filter' />
+          <img src={AboutMeImg} alt="Antoine Paturel" className='rounded-xl image-with-filter' width="100%" height="auto" />
         </div>
       </div>
       <p className='custom-text' data-aos="fade-down">{t('aboutMeIntro2')}</p>

@@ -11,25 +11,25 @@ const Contact = () => {
       <form action="https://getform.io/f/6e2ad9c0-1fdc-4f47-91ee-69a6dadaefdb" method='POST' encType='multipart/form-data'>
         <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
           <div className='flex flex-col'>
-            <label className='contact-label'>{t('contactName')}</label>
-            <input className='contact-input' type="text" name='name' />
+            <label className='contact-label' htmlFor='name'>{t('contactName')}</label>
+            <input className='contact-input' id='name' type="text" name='name' />
           </div>
           <div className='flex flex-col'>
-            <label className='contact-label'>{t('contactPhone')}</label>
-            <input className='contact-input' type="text" name='phone' />
+            <label className='contact-label' htmlFor='phone'>{t('contactPhone')}</label>
+            <input className='contact-input' id='phone' type="text" name='phone' />
           </div>
         </div>
         <div className='flex flex-col py-2'>
-          <label className='contact-label'>Email</label>
-          <input className='contact-input' type="email" name="email" />
+          <label className='contact-label' htmlFor='email'>Email</label>
+          <input className='contact-input' id='email' type="email" name="email" />
         </div>
         <div className='flex flex-col py-2'>
-          <label className='contact-label'>{t('contactSubject')}</label>
-          <input className='contact-input' type="text" name="subject" />
+          <label className='contact-label' htmlFor='subject'>{t('contactSubject')}</label>
+          <input className='contact-input' id='subject' type="text" name="subject" />
         </div>
         <div className='flex flex-col py-2'>
-          <label className='contact-label'>Message</label>
-          <textarea className='contact-input' rows='10' name="message"> </textarea>
+          <label className='contact-label' htmlFor='message'>Message</label>
+          <textarea className='contact-input' id='message' rows='10' name="message"></textarea>
         </div>
         <button className='contact-button'>
           {t('contactSend')}
