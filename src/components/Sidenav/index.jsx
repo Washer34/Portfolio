@@ -92,45 +92,59 @@ const Sidenav = () => {
 
       <div className='md:block hidden fixed top-[25%] z-10'>
         <div className='flex flex-col'>
-          <a href="#main" className='side-link'>
+          <a aria-label='Accueil' href="#main" className='side-link'>
             <AiOutlineHome size={20} />
           </a>
-          <a href="#aboutme" className='side-link'>
+          <a aria-label='A propos de moi' href="#aboutme" className='side-link'>
             <BsPerson size={20} />
           </a>
-          <a href="#projects" className='side-link'>
+          <a aria-label='mes Projets' href="#projects" className='side-link'>
             <AiOutlineProject size={20} />
           </a>
-          <a href="#contact" className='side-link'>
+          <a aria-label='Contactez-moi' href="#contact" className='side-link'>
             <AiOutlineMail size={20} />
-          </a>
-          {mode.theme === 'light' ? (
-            <a onClick={mode.toggleTheme} className='side-link'>
+          </a>{mode.theme === 'light' ? (
+            <button
+              aria-label='Mode Sombre'
+              onClick={mode.toggleTheme}
+              className='side-link'
+            >
               <BsMoonStars size={20} />
-            </a>
+            </button>
           ) : (
-            <a onClick={mode.toggleTheme} className='side-link'>
+            <button
+              aria-label='Mode Lumineux'
+              onClick={mode.toggleTheme}
+              className='side-link'
+            >
               <BsSun size={20} />
-            </a>
+            </button>
           )}
+
           {lang.lang === 'fr' ? (
-            <a onClick={toggleLanguage}
-              className="nav-lang-link">
+            <button
+              aria-label='Langue'
+              onClick={toggleLanguage}
+              className="nav-lang-link"
+            >
               <ReactCountryFlag
                 countryCode="FR"
                 svg
                 title="FR"
               />
-            </a>
+            </button>
           ) : (
-            <a onClick={toggleLanguage}
-              className="nav-lang-link">
+            <button
+              aria-label='Language'
+              onClick={toggleLanguage}
+              className="nav-lang-link"
+            >
               <ReactCountryFlag
                 countryCode="GB"
                 svg
                 title="GB"
               />
-            </a>
+            </button>
           )}
         </div>
       </div>
