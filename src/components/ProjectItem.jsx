@@ -29,7 +29,7 @@ const ProjectItem = (props) => {
           </h3>
           <p className='project-tech'>{attributes.tech}</p>
           <a onClick={openModal}>
-            <p className='project-more-info'>More Info</p>
+            <p className='project-more-info'>Plus d'Infos</p>
           </a>
         </div>
       </div>
