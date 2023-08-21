@@ -8,7 +8,7 @@ const resources = {
   en: {
     translation: {
       mainImageAlt: 'My portfolio image',
-      mainTitle: "I'm Antoine Paturel",
+      mainTitle: "Antoine Paturel",
       mainSubtitlePrefix: "I'm",
       aboutMeTitle: "About me",
       aboutMeIntro: "My name is Antoine, I'm 29 years old, and I am a passionate Fullstack web developer. After completing an 8-month training at 'The Hacking Project', I fell in love with the world of web development. Diligent, friendly, curious, and eager to learn, I am always seeking new challenges to tackle.",
@@ -26,7 +26,7 @@ const resources = {
   fr: {
     translation: {
       mainImageAlt: 'Image de mon portfolio',
-      mainTitle: "Je suis Antoine Paturel",
+      mainTitle: "Antoine Paturel",
       mainSubtitlePrefix: "Je suis ",
       aboutMeTitle: 'À propos de moi',
       aboutMeIntro: "Je m'appelle Antoine, j'ai 29 ans et je suis un développeur web Fullstack passionné. Après avoir suivi une formation de 8 mois à 'The Hacking Project', j'ai été conquis par le monde du développement web. Assidu, amical, curieux et avide d'apprendre, je suis toujours à la recherche de nouveaux défis à relever.",
