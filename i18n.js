@@ -27,7 +27,7 @@ const resources = {
     translation: {
       mainImageAlt: 'Image de mon portfolio',
       mainTitle: "Antoine Paturel",
-      mainSubtitlePrefix: "Je suis ",
+      mainSubtitlePrefix: "Je suis",
       aboutMeTitle: 'À propos de moi',
       aboutMeIntro: "Je m'appelle Antoine, j'ai 29 ans et je suis un développeur web Fullstack passionné. Après avoir suivi une formation de 8 mois à 'The Hacking Project', j'ai été conquis par le monde du développement web. Assidu, amical, curieux et avide d'apprendre, je suis toujours à la recherche de nouveaux défis à relever.",
       aboutMeSkills: "Au cours de mon parcours, j'ai développé de solides compétences en Ruby, Rails, JavaScript, ReactJS, CSS et HTML. De plus, je maîtrise les bases de données SQL et PostgreSQL. J'ai également acquis une compréhension approfondie du processus de développement d'applications, de la création initiale à la mise en scène et au déploiement.",

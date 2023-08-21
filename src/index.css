@@ -511,3 +511,22 @@ h2 {
 [data-aos='custom-fade-in'].aos-animate {
   opacity: 1;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0C0B0B;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(85, 85, 85, 0.3);
+  border-radius: 50px;
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
