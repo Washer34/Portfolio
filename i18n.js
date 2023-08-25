@@ -22,6 +22,13 @@ const resources = {
       contactSubject: "Subject",
       contactSend: "Send Message",
       downloadCv: "Download my fullstack web developer CV",
+      navHome: "Home",
+      navAboutme: "About me",
+      navProjects: "Projects",
+      navContact: "Contact",
+      navLightmode: "Light mode",
+      navDarkmode: "Dark mode",
+      navLang: "Language",
     }
   },
   fr: {
@@ -41,6 +48,13 @@ const resources = {
       contactSubject: "Sujet",
       contactSend: "Envoyer le message",
       downloadCv: "Télécharger mon CV développeur web fullstack",
+      navHome: "Accueil",
+      navAboutme: "A propos de moi",
+      navProjects: "Projets",
+      navContact: "Contact",
+      navLightmode: "Mode lumineux",
+      navDarkmode: "Mode Sombre",
+      navLang: "Langue",
     }
   }
 };

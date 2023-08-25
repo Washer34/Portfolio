@@ -4,11 +4,13 @@ import { BsPerson, BsMoonStars, BsSun } from 'react-icons/bs'
 import ThemeContext from '../../theme/themecontext'
 import LangContext from '../../lang/langcontext';
 import ReactCountryFlag from "react-country-flag"
+import { useTranslation } from 'react-i18next'
 
 const Sidenav = () => {
   const mode = useContext(ThemeContext)
   const lang = useContext(LangContext)
   const [nav, setNav] = useState(false)
+  const { t, i18n } = useTranslation();
 
   const handleNav = () => {
     setNav(!nav)
@@ -33,34 +35,34 @@ const Sidenav = () => {
             <a aria-label='Accueil' onClick={handleNav}
               href="#main" className="nav-link">
               <AiOutlineHome size={20} />
-              <span className="pl-4">Home</span>
+              <span className="pl-4">{t('navHome')}</span>
             </a>
             <a aria-label='A propos de moi' onClick={handleNav}
               href="#aboutme" className="nav-link">
               <BsPerson size={20} />
-              <span className="pl-4">About me</span>
+              <span className="pl-4">{t('navAboutme')}</span>
             </a>
             <a aria-label='Les projets' onClick={handleNav}
               href="#projects" className="nav-link">
               <AiOutlineProject size={20} />
-              <span className="pl-4">Projects</span>
+              <span className="pl-4">{t('navProjects')}</span>
             </a>
             <a aria-label='Contactez-moi' onClick={handleNav}
               href="#contact" className="nav-link">
               <AiOutlineMail size={20} />
-              <span className="pl-4">Contact</span>
+              <span className="pl-4">{t('navContact')}</span>
             </a>
             {mode.theme === 'light' ? (
               <a aria-label='Mode sombre' onClick={mode.toggleTheme}
                 className="nav-link">
                 <BsMoonStars size={20} />
-                <span className="pl-4">Dark mode</span>
+                <span className="pl-4">{t('navDarkmode')}</span>
               </a>
             ) : (
               <a aria-label='Mode lumineux' onClick={mode.toggleTheme}
                 className="nav-link">
                 <BsSun size={20} />
-                <span className="pl-4">Light mode</span>
+                <span className="pl-4">{t('navLightmode')}</span>
               </a>
             )
             }
@@ -71,7 +73,7 @@ const Sidenav = () => {
                   countryCode="FR"
                   svg
                   title="FR" />
-                <span className="pl-4">Langue</span>
+                <span className="pl-4">{t('navLang')}</span>
               </a>
             ) : (
               <a aria-label='Switch language' onClick={handleToggleLanguage}
@@ -80,7 +82,7 @@ const Sidenav = () => {
                   countryCode="GB"
                   svg
                   title="GB" />
-                <span className="pl-4">Language</span>
+                <span className="pl-4">{t('navLang')}</span>
               </a>
             )}
           </div>
