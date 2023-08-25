@@ -20,7 +20,7 @@ const ProjectItem = (props) => {
   };
 
   return (
-    <div>
+    <article>
       <div className='project-item'>
         <img src={`${imgUrl}`} alt="/" className='project-img' width="100%" height="auto" />
         <div className='project-details'>
@@ -39,7 +39,7 @@ const ProjectItem = (props) => {
           <ProjectModal project={props} />
         </div>
       )}
-    </div>
+    </article>
   )
 }
 

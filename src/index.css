@@ -501,6 +501,63 @@ h2 {
   text-align: center;
 }
 
+.CV-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.CV-text-hidden {
+  margin-bottom: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.CV-text-visible {
+  transition: opacity 0.3s ease-in-out;
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.CV-button {
+  display: inline-block;
+}
+
+#light .CV-icon {
+  color: white;
+  font-size: 24px;
+  border-radius: 75%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: #001b5e;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#dark .CV-icon {
+  font-size: 24px;
+  border-radius: 75%;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background-color: #0a0a0a;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#dark .CV-icon:hover {
+  background-color: #3a3a3a;
+}
+
+#light .CV-icon:hover {
+  background-color: #0056b3;
+}
+
 /* Effets animations */
 
 [data-aos='custom-fade-in'] {

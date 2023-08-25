@@ -21,6 +21,7 @@ const resources = {
       contactPhone: "Phone",
       contactSubject: "Subject",
       contactSend: "Send Message",
+      downloadCv: "Download my fullstack web developer CV",
     }
   },
   fr: {
@@ -39,6 +40,7 @@ const resources = {
       contactPhone: "Téléphone",
       contactSubject: "Sujet",
       contactSend: "Envoyer le message",
+      downloadCv: "Télécharger mon CV développeur web fullstack",
     }
   }
 };
