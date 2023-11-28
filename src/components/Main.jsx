@@ -12,7 +12,7 @@ const Main = () => {
       <div className='main-overlay'>
         <div className='main-content'>
           <h1 className='main-title'>{t('mainTitle')}</h1>
-          <p className='main-subtitle'>Web Developer</p>
+          <p className='main-subtitle'>{t('mainSubtitle')}</p>
           <section className='main-subtitle'>
             {t('mainSubtitlePrefix')}&nbsp;
             <TypeAnimation
