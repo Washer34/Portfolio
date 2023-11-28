@@ -5,12 +5,12 @@ import ReactMarkdown from 'react-markdown'
 
 const ProjectModal = (props) => {
   const { project } = props
-  const { attributes } = project;
+  const { imgUrl } = project;
 
   const generateCarouselItems = () => {
-    return attributes.screens.data.map((screen, index) => (
+    return imgUrl.map((url, index) => (
       <div key={index}>
-        <img className='carousel-img' src={screen.attributes.url} alt={`Image ${index + 1}`}
+        <img className='carousel-img' src={url} alt={`Image ${index + 1}`}
           width="100%"
           height="auto" />
       </div>
@@ -23,8 +23,8 @@ const ProjectModal = (props) => {
       <Carousel width={'80%'} infiniteLoop={true}>
         {generateCarouselItems()}
       </Carousel>
-      <h1 className='custom-title'>{attributes.title}</h1>
-      <ReactMarkdown>{attributes.description}</ReactMarkdown>
+      <h1 className='custom-title'>{project.title}</h1>
+      <ReactMarkdown>{project.description}</ReactMarkdown>
     </div>
   );
 };

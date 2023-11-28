@@ -12,18 +12,15 @@ const Main = () => {
       <div className='main-overlay'>
         <div className='main-content'>
           <h1 className='main-title'>{t('mainTitle')}</h1>
+          <p className='main-subtitle'>Web Developer</p>
           <section className='main-subtitle'>
             {t('mainSubtitlePrefix')}&nbsp;
             <TypeAnimation
               sequence={[
-                'Développeur Web',
+                'React',
                 1000,
-                'Fullstack',
+                'Node',
                 1000,
-                'Passionné de technologie',
-                1000,
-                'Constructif',
-                1000
               ]}
               wrapper="span"
               speed={50}

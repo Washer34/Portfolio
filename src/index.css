@@ -259,9 +259,20 @@
 }
 
 #dark .main-icon {
-  cursor: pointer;
   margin-right: 1rem;
   color: #e2e8f0;
+  transition: color 0.3s ease;
+}
+
+#dark .main-icon:hover {
+  cursor: pointer;
+  color: #90cdf4;
+  transition: color 0.3s ease;
+}
+
+#light .main-icon:hover {
+  cursor: pointer;
+  color: #001b5e;
   transition: color 0.3s ease;
 }
 
@@ -557,6 +568,7 @@ h2 {
 #light .CV-icon:hover {
   background-color: #0056b3;
 }
+
 
 /* Effets animations */
 

@@ -27,7 +27,7 @@ const Aboutme = () => {
         </p>
         <a
           className='CV-button'
-          href="https://drive.google.com/uc?export=download&id=1D5dgyUmQAA-F-8TBJhsA_4wkndGeL_jI"
+          href="https://drive.google.com/uc?export=download&id=1Xz6Ci_r6kHDUo5Flvu469ijL9jjcn940"
           download="CV_Developpeur_Web_Fullstack_Antoine_Paturel.pdf"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}

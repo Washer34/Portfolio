@@ -3,8 +3,7 @@ import ProjectModal from './ProjectModal'
 
 const ProjectItem = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const { description, attributes, data, zIndex } = props;
-  const imgUrl = attributes.screens.data[0].attributes.url || '';
+  const { title, tech, imgUrl, zIndex } = props;
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -22,12 +21,12 @@ const ProjectItem = (props) => {
   return (
     <article>
       <div className='project-item'>
-        <img src={`${imgUrl}`} alt="/" className='project-img' width="100%" height="auto" />
+        <img src={`${imgUrl[0]}`} alt="/" className='project-img' width="100%" height="auto" />
         <div className='project-details'>
           <h3 className='project-title'>
-            {attributes.title}
+            {title}
           </h3>
-          <p className='project-tech'>{attributes.tech}</p>
+          <p className='project-tech'>{tech}</p>
           <a onClick={openModal}>
             <p className='project-more-info'>Plus d'Infos</p>
           </a>
